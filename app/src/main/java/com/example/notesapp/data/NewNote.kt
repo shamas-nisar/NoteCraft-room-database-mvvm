@@ -1,11 +1,14 @@
-package com.example.notesapp
+package com.example.notesapp.data
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import com.example.notesapp.model.Note
+import com.example.notesapp.R
 import com.example.notesapp.databinding.NewNoteBinding
+import com.example.notesapp.ui.MainActivity
 
 class NewNote : DialogFragment() {
 

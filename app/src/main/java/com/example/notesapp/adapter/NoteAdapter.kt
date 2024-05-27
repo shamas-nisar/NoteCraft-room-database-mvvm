@@ -1,17 +1,20 @@
-package com.example.notesapp
+package com.example.notesapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.notesapp.R
+import com.example.notesapp.model.Note
+import com.example.notesapp.ui.MainActivity
 
 class NoteAdapter(private val mainActivity: MainActivity):
-    RecyclerView.Adapter<NoteAdapter.ViewHolderNote>() {
+    RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     var noteList = mutableListOf<Note>()
 
-    inner class ViewHolderNote(view: View) :
+    inner class NoteViewHolder(view: View) :
         RecyclerView.ViewHolder(view) {
 
         internal var title = view.findViewById<View>(R.id.viewTitle) as TextView
@@ -25,11 +28,11 @@ class NoteAdapter(private val mainActivity: MainActivity):
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderNote {
-        return ViewHolderNote(LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        return NoteViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false))
     }
 
-    override fun onBindViewHolder(holder: ViewHolderNote, position: Int) {
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = noteList[position]
 
         holder.title.text = note.title

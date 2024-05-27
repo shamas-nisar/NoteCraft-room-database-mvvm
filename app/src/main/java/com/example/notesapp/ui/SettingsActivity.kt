@@ -1,4 +1,4 @@
-package com.example.notesapp
+package com.example.notesapp.ui
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,6 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceFragmentCompat
+import com.example.notesapp.R
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -25,14 +26,15 @@ class SettingsActivity : AppCompatActivity() {
     // To tell the ba
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) finish()
-        return when (item.itemId) {
+        return super.onOptionsItemSelected(item)
+        /*return when (item.itemId) {
             R.id.action_settings -> {
                 val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
                 true
             }
             else -> super.onOptionsItemSelected(item)
-        }
+        }*/
     }
 
     class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {

@@ -1,6 +1,7 @@
-package com.example.notesapp
+package com.example.notesapp.ui
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
@@ -11,6 +12,11 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.notesapp.model.Note
+import com.example.notesapp.adapter.NoteAdapter
+import com.example.notesapp.R
+import com.example.notesapp.data.NewNote
+import com.example.notesapp.data.ShowNote
 import com.example.notesapp.databinding.ActivityMainBinding
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -80,7 +86,11 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 
@@ -103,7 +113,7 @@ class MainActivity : AppCompatActivity() {
         dialog.show(supportFragmentManager, null)
     }
 
-    fun saveNotes() {
+    private fun saveNotes() {
         val notes = adapter.noteList
         val gson = GsonBuilder().create()
         val jsonNotes = gson.toJson(notes)
