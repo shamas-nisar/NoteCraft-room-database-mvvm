@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/noteItemLayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#4F378A"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="5dp"
+        android:padding="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,6 +29,9 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="@string/title"
+            android:fontFamily="@font/google_sans_bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             android:importantForAutofill="no" />
 
         <EditText
@@ -23,6 +40,9 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
             android:hint="@string/contents"
+            android:fontFamily="@font/google_sans_regular"
+            android:textColor="@color/white"
+            android:textSize="14sp"
             android:inputType="text"
             android:importantForAutofill="no" />
 
@@ -34,18 +54,36 @@
             <Button
                 android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="43dp"
+                android:fontFamily="@font/google_sans_medium"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:backgroundTint="@color/black"
+                android:textSize="19sp"
+                android:textColor="#4F3789"
                 android:text="@string/cancel"
                 style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/btnOK"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="43dp"
                 android:layout_marginStart="30dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center"
+                android:textColor="#4F3789"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/google_sans_medium"
+                android:textStyle="bold"
+                android:textSize="19sp"
                 android:text="@string/ok"
                 style="?android:attr/buttonBarButtonStyle" />
+
         </TableRow>
+
     </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </ScrollView>

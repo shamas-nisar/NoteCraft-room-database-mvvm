@@ -39,6 +39,12 @@ class ShowNote(private val note: Note, private val index: Int) : DialogFragment(
             dismiss()
         }
 
+        binding.btnShare.setOnClickListener {
+            mainActivity.shareNote(note) // This line calls the shareNote function in MainActivity
+            Toast.makeText(mainActivity, "Note is being shared..", Toast.LENGTH_SHORT).show()
+            dismiss()
+        }
+
         return builder.create()
     }
 

@@ -113,6 +113,15 @@ class MainActivity : AppCompatActivity() {
         dialog.show(supportFragmentManager, null)
     }
 
+    fun shareNote(note: Note) {
+        val intent = Intent()
+        intent.action = Intent.ACTION_SEND
+        intent.putExtra(Intent.EXTRA_TEXT, "${note.title}\n\n${note.content}") // Assuming 'content' is a property of the Note class
+        intent.type = "text/plain" // Set the type to text/plain for sharing text
+        val shareThisNote = Intent.createChooser(intent, "Share Note via: ")
+        startActivity(shareThisNote)
+    }
+
     private fun saveNotes() {
         val notes = adapter.noteList
         val gson = GsonBuilder().create()
