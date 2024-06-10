@@ -3,7 +3,7 @@
     <SwitchPreferenceCompat
         app:key="theme"
         app:defaultValue="false"
-        app:title="@string/select_theme" />
+        app:title="@string/select_theme"/>
 
     <SwitchPreferenceCompat
         app:key="dividingLines"

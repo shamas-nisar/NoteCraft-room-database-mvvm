@@ -8,4 +8,6 @@
 
     <color name="nightColorPrimary">#272727</color>
     <color name="nightColorSecondary">#84C9FB</color>
+
+    <color name="noteBackgroundColor">#FF4F378A</color>
 </resources>

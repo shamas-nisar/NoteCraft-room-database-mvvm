@@ -9,10 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:cardBackgroundColor="#4F378A"
+        app:background="@android:color/transparent"
         android:clickable="true"
         android:focusable="true"
-        android:background="?attr/selectableItemBackground"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp"
         app:cardCornerRadius="13dp"
         app:cardElevation="5dp"
         android:padding="5dp">
@@ -43,7 +46,7 @@
             android:fontFamily="@font/google_sans_regular"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:importantForAutofill="no" />
 
         <TableRow

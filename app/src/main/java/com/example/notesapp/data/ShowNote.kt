@@ -45,7 +45,9 @@ class ShowNote(private val note: Note, private val index: Int) : DialogFragment(
             dismiss()
         }
 
-        return builder.create()
+        val dialog = builder.create()
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        return dialog
     }
 
     override fun onDestroyView() {
