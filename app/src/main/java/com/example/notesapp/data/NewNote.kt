@@ -28,7 +28,6 @@ class NewNote : DialogFragment() {
 
         val builder = AlertDialog.Builder(mainActivity)
             .setView(binding.root)
-            .setMessage(resources.getString(R.string.add_new_note))
 
         binding.editContents.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -92,7 +91,7 @@ class NewNote : DialogFragment() {
             } else Toast.makeText(mainActivity, resources.getString(R.string.note_empty), Toast.LENGTH_LONG).show()
         }
         val dialog = builder.create()
-        dialog.window?.setBackgroundDrawableResource(android.R.color.system_error_dark)
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         return dialog
     }
 
