@@ -57,17 +57,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:drawableStart="@drawable/note_app_icon_top"
             android:drawablePadding="5dp"
             android:fontFamily="@font/google_sans_bold"
             android:text="NoteCraft"
+            android:paddingStart="7dp"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:layout_marginStart="3dp"/>
 
         <ImageView
             android:id="@+id/btnMenu"
-            android:padding="10dp"
+            android:paddingEnd="7dp"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/vertical_menu"

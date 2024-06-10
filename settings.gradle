@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NotesApp"
+rootProject.name = "NoteCraft"
 include ':app'
