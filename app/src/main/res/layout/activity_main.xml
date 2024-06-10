@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!--<com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
@@ -18,9 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@drawable/home_topbar_shape"
-            android:elevation="4dp">
+            android:elevation="4dp"/>
 
-        <!--<TextView
+        &lt;!&ndash;<TextView
             android:id="@+id/application_name_at_top_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,20 +39,18 @@
             app:strokeColor="@android:color/transparent"
             android:layout_gravity="end|center_vertical"
             android:padding="10dp"
-            app:tint="@color/black" />-->
+            app:tint="@color/black" />&ndash;&gt;
 
-        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>-->
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!--<com.google.android.material.card.MaterialCardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:elevation="4dp"
         app:cardBackgroundColor="#33345B"
-        app:cardCornerRadius="-1dp"
-        app:elevation="2dp">
+        app:cardCornerRadius="-10dp"
+        app:elevation="10dp">
 
         <TextView
             android:id="@+id/application_name_at_top_bar"
@@ -64,21 +62,26 @@
             android:fontFamily="@font/google_sans_bold"
             android:text="NoteCraft"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:layout_marginStart="3dp"/>
 
         <ImageView
+            android:id="@+id/btnMenu"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/vertical_menu"
             app:strokeColor="@android:color/transparent"
             android:layout_gravity="end|center_vertical"/>
 
-    </com.google.android.material.card.MaterialCardView>-->
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="68dp"
+        android:padding="1dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
