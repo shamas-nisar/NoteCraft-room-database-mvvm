@@ -5,9 +5,9 @@ import android.app.Dialog
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import com.example.notesapp.model.Note
 import com.example.notesapp.R
 import com.example.notesapp.databinding.ShowNoteBinding
+import com.example.notesapp.model.Note
 import com.example.notesapp.ui.MainActivity
 
 class ShowNote(private val note: Note, private val index: Int) : DialogFragment() {
@@ -27,14 +27,18 @@ class ShowNote(private val note: Note, private val index: Int) : DialogFragment(
         binding.txtTitle.text = note.title
         binding.txtContents.text = note.content
 
-        binding.btnOK.setOnClickListener{
+        binding.btnOK.setOnClickListener {
             dismiss()
         }
 
-        binding.btnDelete.setOnClickListener{
+        binding.btnDelete.setOnClickListener {
             mainActivity.deleteNote(index)
 
-            Toast.makeText(mainActivity, resources.getString(R.string.note_deleted), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                mainActivity,
+                resources.getString(R.string.note_deleted),
+                Toast.LENGTH_SHORT
+            ).show()
 
             dismiss()
         }

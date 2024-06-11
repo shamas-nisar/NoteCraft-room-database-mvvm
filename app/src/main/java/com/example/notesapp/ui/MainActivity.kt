@@ -12,12 +12,12 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.notesapp.model.Note
-import com.example.notesapp.adapter.NoteAdapter
 import com.example.notesapp.R
+import com.example.notesapp.adapter.NoteAdapter
 import com.example.notesapp.data.NewNote
 import com.example.notesapp.data.ShowNote
 import com.example.notesapp.databinding.ActivityMainBinding
+import com.example.notesapp.model.Note
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
@@ -75,8 +75,15 @@ class MainActivity : AppCompatActivity() {
         else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val showDividingLines = sharedPreferences.getBoolean("dividingLines", false)
-        if (showDividingLines) binding.recyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
-        else if (binding.recyclerView.itemDecorationCount > 0) binding.recyclerView.removeItemDecorationAt(0)
+        if (showDividingLines) binding.recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                LinearLayoutManager.VERTICAL
+            )
+        )
+        else if (binding.recyclerView.itemDecorationCount > 0) binding.recyclerView.removeItemDecorationAt(
+            0
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -95,6 +102,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
 
@@ -102,7 +110,7 @@ class MainActivity : AppCompatActivity() {
 
     fun createNewNote(note: Note) {
         adapter.noteList.add(note)
-        adapter.notifyItemInserted(adapter.noteList.size -1)
+        adapter.notifyItemInserted(adapter.noteList.size - 1)
         saveNotes()
     }
 
@@ -120,7 +128,10 @@ class MainActivity : AppCompatActivity() {
     fun shareNote(note: Note) {
         val intent = Intent()
         intent.action = Intent.ACTION_SEND
-        intent.putExtra(Intent.EXTRA_TEXT, "${note.title}\n\n${note.content}") // Assuming 'content' is a property of the Note class
+        intent.putExtra(
+            Intent.EXTRA_TEXT,
+            "${note.title}\n\n${note.content}"
+        ) // Assuming 'content' is a property of the Note class
         intent.type = "text/plain" // Set the type to text/plain for sharing text
         val shareThisNote = Intent.createChooser(intent, "Share Note via: ")
         startActivity(shareThisNote)
@@ -145,7 +156,7 @@ class MainActivity : AppCompatActivity() {
                 val stringBuilder = StringBuilder()
                 for (line in reader.readLine()) stringBuilder.append(line)
 
-                if (stringBuilder.isNotEmpty()){
+                if (stringBuilder.isNotEmpty()) {
                     val listType = object : TypeToken<List<Note>>() {}.type
                     noteList.addAll(Gson().fromJson(stringBuilder.toString(), listType))
                 }

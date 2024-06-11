@@ -1,6 +1,5 @@
 package com.example.notesapp.ui
 
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
@@ -37,7 +36,8 @@ class SettingsActivity : AppCompatActivity() {
         }*/
     }
 
-    class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
+    class SettingsFragment : PreferenceFragmentCompat(),
+        SharedPreferences.OnSharedPreferenceChangeListener {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
 
@@ -62,7 +62,9 @@ class SettingsActivity : AppCompatActivity() {
                 when (key) {
                     "theme" -> {
                         val nightThemeSelected = sharedPreferences.getBoolean(key, false)
-                        if (nightThemeSelected) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                        if (nightThemeSelected) AppCompatDelegate.setDefaultNightMode(
+                            AppCompatDelegate.MODE_NIGHT_YES
+                        )
                         else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                     }
                 }

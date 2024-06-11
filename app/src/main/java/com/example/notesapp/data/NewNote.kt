@@ -6,13 +6,11 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.inputmethod.EditorInfo
-import android.widget.EditText
 import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.DialogFragment
-import com.example.notesapp.model.Note
 import com.example.notesapp.R
 import com.example.notesapp.databinding.NewNoteBinding
+import com.example.notesapp.model.Note
 import com.example.notesapp.ui.MainActivity
 
 class NewNote : DialogFragment() {
@@ -85,10 +83,18 @@ class NewNote : DialogFragment() {
                 val note = Note(title, contents)
                 mainActivity.createNewNote(note)
 
-                Toast.makeText(mainActivity, resources.getString(R.string.note_saved), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    mainActivity,
+                    resources.getString(R.string.note_saved),
+                    Toast.LENGTH_SHORT
+                ).show()
 
                 dismiss()
-            } else Toast.makeText(mainActivity, resources.getString(R.string.note_empty), Toast.LENGTH_LONG).show()
+            } else Toast.makeText(
+                mainActivity,
+                resources.getString(R.string.note_empty),
+                Toast.LENGTH_LONG
+            ).show()
         }
         val dialog = builder.create()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)

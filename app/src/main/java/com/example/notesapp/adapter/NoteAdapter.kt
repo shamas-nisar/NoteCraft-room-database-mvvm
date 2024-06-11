@@ -9,7 +9,7 @@ import com.example.notesapp.R
 import com.example.notesapp.model.Note
 import com.example.notesapp.ui.MainActivity
 
-class NoteAdapter(private val mainActivity: MainActivity):
+class NoteAdapter(private val mainActivity: MainActivity) :
     RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     var noteList = mutableListOf<Note>()
@@ -29,7 +29,9 @@ class NoteAdapter(private val mainActivity: MainActivity):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        return NoteViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false))
+        return NoteViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {

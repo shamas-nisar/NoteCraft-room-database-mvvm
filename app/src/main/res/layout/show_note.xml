@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:fontFamily="@font/google_sans_bold"/>
+                    android:fontFamily="@font/google_sans_bold" />
 
                 <TextView
                     android:id="@+id/txtContents"
@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="20dp"
                     android:textSize="18sp"
-                    android:fontFamily="@font/google_sans_medium"/>
+                    android:fontFamily="@font/google_sans_medium" />
 
                 <TableRow
                     android:layout_width="match_parent"
