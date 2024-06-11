@@ -100,6 +100,6 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/add_new_note"
-        app:srcCompat="@drawable/ic_add_note" />
+        app:srcCompat="@drawable/fab_icon_image" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
