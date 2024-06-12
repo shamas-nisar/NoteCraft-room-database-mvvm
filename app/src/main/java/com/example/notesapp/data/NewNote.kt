@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.notesapp.R
 import com.example.notesapp.databinding.NewNoteBinding
-import com.example.notesapp.model.Note
+import com.example.notesapp.data.model.Note
 import com.example.notesapp.ui.MainActivity
 
 class NewNote : DialogFragment() {

@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.notesapp.R
 import com.example.notesapp.databinding.ShowNoteBinding
-import com.example.notesapp.model.Note
+import com.example.notesapp.data.model.Note
 import com.example.notesapp.ui.MainActivity
 
 class ShowNote(private val note: Note, private val index: Int) : DialogFragment() {

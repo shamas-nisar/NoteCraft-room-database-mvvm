@@ -1,0 +1,51 @@
+com.example.notesapp-core-runtime-2.2.0-0 C:\Users\Shams Nisar\.gradle\caches\transforms-4\0a8e28d302239fa4a91f386576f3a27c\transformed\core-runtime-2.2.0\res
+com.example.notesapp-annotation-experimental-1.4.0-1 C:\Users\Shams Nisar\.gradle\caches\transforms-4\0b2cebd477005738c94e2e65f8db076b\transformed\annotation-experimental-1.4.0\res
+com.example.notesapp-preference-1.2.1-2 C:\Users\Shams Nisar\.gradle\caches\transforms-4\10382c07210c924f706e0b8ebd60746b\transformed\preference-1.2.1\res
+com.example.notesapp-navigation-ui-ktx-2.7.7-3 C:\Users\Shams Nisar\.gradle\caches\transforms-4\1058c35a54a8d8c2a9c9903a815ed394\transformed\navigation-ui-ktx-2.7.7\res
+com.example.notesapp-cardview-1.0.0-4 C:\Users\Shams Nisar\.gradle\caches\transforms-4\1619a7626474a97fceda3e125a849af4\transformed\cardview-1.0.0\res
+com.example.notesapp-activity-ktx-1.8.0-5 C:\Users\Shams Nisar\.gradle\caches\transforms-4\16614d750449e451d42bcafe5354358f\transformed\activity-ktx-1.8.0\res
+com.example.notesapp-lifecycle-runtime-2.6.2-6 C:\Users\Shams Nisar\.gradle\caches\transforms-4\1f468bdb5c7dc03b76985cb1022ad8af\transformed\lifecycle-runtime-2.6.2\res
+com.example.notesapp-fragment-1.6.2-7 C:\Users\Shams Nisar\.gradle\caches\transforms-4\1f8e1f73f444f05d71b5579aa6f40bc4\transformed\fragment-1.6.2\res
+com.example.notesapp-core-ktx-1.13.1-8 C:\Users\Shams Nisar\.gradle\caches\transforms-4\207aa3707cfd9a3f3e2c6562369ea8ab\transformed\core-ktx-1.13.1\res
+com.example.notesapp-viewpager2-1.0.0-9 C:\Users\Shams Nisar\.gradle\caches\transforms-4\20bac291d9a11a01ec101a68382e446c\transformed\viewpager2-1.0.0\res
+com.example.notesapp-lifecycle-runtime-ktx-2.6.2-10 C:\Users\Shams Nisar\.gradle\caches\transforms-4\20decaf9b6979c5e819a1f241665797c\transformed\lifecycle-runtime-ktx-2.6.2\res
+com.example.notesapp-lifecycle-livedata-core-2.6.2-11 C:\Users\Shams Nisar\.gradle\caches\transforms-4\285d7422e8c9b7d34ca5d59bc78c6422\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.notesapp-material-1.12.0-12 C:\Users\Shams Nisar\.gradle\caches\transforms-4\2a8a0bdd03ea7d584aa5ced59c0cf29e\transformed\material-1.12.0\res
+com.example.notesapp-fragment-ktx-1.6.2-13 C:\Users\Shams Nisar\.gradle\caches\transforms-4\2b086093e905843b3cb6723e6717a59b\transformed\fragment-ktx-1.6.2\res
+com.example.notesapp-drawerlayout-1.1.1-14 C:\Users\Shams Nisar\.gradle\caches\transforms-4\2b66c139637ce36211cb81a16d42860c\transformed\drawerlayout-1.1.1\res
+com.example.notesapp-navigation-runtime-ktx-2.7.7-15 C:\Users\Shams Nisar\.gradle\caches\transforms-4\311aa370c2f51f4cfea64de2b6b8103c\transformed\navigation-runtime-ktx-2.7.7\res
+com.example.notesapp-activity-1.8.0-16 C:\Users\Shams Nisar\.gradle\caches\transforms-4\31813b781297bc27985ab247d8c9163d\transformed\activity-1.8.0\res
+com.example.notesapp-profileinstaller-1.3.0-17 C:\Users\Shams Nisar\.gradle\caches\transforms-4\3b4f5861e67236fb260707e78c173999\transformed\profileinstaller-1.3.0\res
+com.example.notesapp-transition-1.5.0-18 C:\Users\Shams Nisar\.gradle\caches\transforms-4\46f19fda3ac2866babea10df9da4b5d4\transformed\transition-1.5.0\res
+com.example.notesapp-navigation-common-2.7.7-19 C:\Users\Shams Nisar\.gradle\caches\transforms-4\4afb54a936ea8f62b5ca6c72cef36050\transformed\navigation-common-2.7.7\res
+com.example.notesapp-core-1.13.1-20 C:\Users\Shams Nisar\.gradle\caches\transforms-4\4c17a78a5d6e122054365955915f8260\transformed\core-1.13.1\res
+com.example.notesapp-lifecycle-viewmodel-2.6.2-21 C:\Users\Shams Nisar\.gradle\caches\transforms-4\4e5b1f3718b1744845514cff0613def0\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.notesapp-emoji2-views-helper-1.2.0-22 C:\Users\Shams Nisar\.gradle\caches\transforms-4\5f2bd078e042c76a5b1a2c6aab90677e\transformed\emoji2-views-helper-1.2.0\res
+com.example.notesapp-slidingpanelayout-1.2.0-23 C:\Users\Shams Nisar\.gradle\caches\transforms-4\6b4669515ce48bbee1229f1c26677d21\transformed\slidingpanelayout-1.2.0\res
+com.example.notesapp-lifecycle-livedata-2.6.2-24 C:\Users\Shams Nisar\.gradle\caches\transforms-4\7221bfe1a4f8b0d071b97419c14f722b\transformed\lifecycle-livedata-2.6.2\res
+com.example.notesapp-startup-runtime-1.1.1-25 C:\Users\Shams Nisar\.gradle\caches\transforms-4\883df398e19670aa4c2061e587b2be75\transformed\startup-runtime-1.1.1\res
+com.example.notesapp-appcompat-1.6.1-26 C:\Users\Shams Nisar\.gradle\caches\transforms-4\908b244589d73bdd96e74dc49ebaf2da\transformed\appcompat-1.6.1\res
+com.example.notesapp-navigation-runtime-2.7.7-27 C:\Users\Shams Nisar\.gradle\caches\transforms-4\95193ac546c7f8efcb26a36b960d8b9b\transformed\navigation-runtime-2.7.7\res
+com.example.notesapp-lifecycle-process-2.6.2-28 C:\Users\Shams Nisar\.gradle\caches\transforms-4\9733d7e0c2fb2c7bad227ff8e8c01032\transformed\lifecycle-process-2.6.2\res
+com.example.notesapp-savedstate-1.2.1-29 C:\Users\Shams Nisar\.gradle\caches\transforms-4\9763fbd1929ae731c92b370da751aab7\transformed\savedstate-1.2.1\res
+com.example.notesapp-navigation-common-ktx-2.7.7-30 C:\Users\Shams Nisar\.gradle\caches\transforms-4\98b6b561041fad00bbb1d24b278959f6\transformed\navigation-common-ktx-2.7.7\res
+com.example.notesapp-savedstate-ktx-1.2.1-31 C:\Users\Shams Nisar\.gradle\caches\transforms-4\a089128f0334b4cbb4e332ede659960b\transformed\savedstate-ktx-1.2.1\res
+com.example.notesapp-lifecycle-viewmodel-ktx-2.6.2-32 C:\Users\Shams Nisar\.gradle\caches\transforms-4\a324f981e0f1bf405bc6bcd345014602\transformed\lifecycle-viewmodel-ktx-2.6.2\res
+com.example.notesapp-lifecycle-livedata-core-ktx-2.6.2-33 C:\Users\Shams Nisar\.gradle\caches\transforms-4\ab2d1be282eb81e8615281600d56f3e2\transformed\lifecycle-livedata-core-ktx-2.6.2\res
+com.example.notesapp-navigation-fragment-ktx-2.7.7-34 C:\Users\Shams Nisar\.gradle\caches\transforms-4\b1b125e926df2cbb6aa1323674440c96\transformed\navigation-fragment-ktx-2.7.7\res
+com.example.notesapp-lifecycle-viewmodel-savedstate-2.6.2-35 C:\Users\Shams Nisar\.gradle\caches\transforms-4\b3560ea884221fb0ddbd17e29a3985b3\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.notesapp-recyclerview-1.1.0-36 C:\Users\Shams Nisar\.gradle\caches\transforms-4\b644b35e5e2fd3191845790266f7485e\transformed\recyclerview-1.1.0\res
+com.example.notesapp-appcompat-resources-1.6.1-37 C:\Users\Shams Nisar\.gradle\caches\transforms-4\b64f81e1a1de511ade6a7aaa7d138cc1\transformed\appcompat-resources-1.6.1\res
+com.example.notesapp-emoji2-1.2.0-38 C:\Users\Shams Nisar\.gradle\caches\transforms-4\c2409c1dc2e8f8a4ade4c0434aa44d5b\transformed\emoji2-1.2.0\res
+com.example.notesapp-coordinatorlayout-1.1.0-39 C:\Users\Shams Nisar\.gradle\caches\transforms-4\dedfae7fea07b82a2132003444b4c69d\transformed\coordinatorlayout-1.1.0\res
+com.example.notesapp-navigation-ui-2.7.7-40 C:\Users\Shams Nisar\.gradle\caches\transforms-4\e0fffd6438751d2d51f34afc318f50a4\transformed\navigation-ui-2.7.7\res
+com.example.notesapp-window-1.0.0-41 C:\Users\Shams Nisar\.gradle\caches\transforms-4\ed52f07cce3c0c6910c868683a33e10b\transformed\window-1.0.0\res
+com.example.notesapp-navigation-fragment-2.7.7-42 C:\Users\Shams Nisar\.gradle\caches\transforms-4\f703c9d80e0c7d5b3143e36a0c1958b5\transformed\navigation-fragment-2.7.7\res
+com.example.notesapp-constraintlayout-2.1.4-43 C:\Users\Shams Nisar\.gradle\caches\transforms-4\fa842b05ee2d5f4891ed7d1c689c7cd9\transformed\constraintlayout-2.1.4\res
+com.example.notesapp-pngs-44 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\generated\res\pngs\debug
+com.example.notesapp-resValues-45 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\generated\res\resValues\debug
+com.example.notesapp-packageDebugResources-46 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.notesapp-packageDebugResources-47 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.notesapp-debug-48 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.notesapp-debug-49 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\src\debug\res
+com.example.notesapp-main-50 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\src\main\res

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.R
-import com.example.notesapp.model.Note
+import com.example.notesapp.data.model.Note
 import com.example.notesapp.ui.MainActivity
 
 class NoteAdapter(private val mainActivity: MainActivity) :

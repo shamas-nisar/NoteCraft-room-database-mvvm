@@ -17,7 +17,7 @@ import com.example.notesapp.adapter.NoteAdapter
 import com.example.notesapp.data.NewNote
 import com.example.notesapp.data.ShowNote
 import com.example.notesapp.databinding.ActivityMainBinding
-import com.example.notesapp.model.Note
+import com.example.notesapp.data.model.Note
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken

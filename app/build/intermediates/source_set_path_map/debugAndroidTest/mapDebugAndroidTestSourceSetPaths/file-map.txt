@@ -1,0 +1,6 @@
+com.example.notesapp.test.app-annotation-experimental-1.4.0-0 C:\Users\Shams Nisar\.gradle\caches\transforms-4\0b2cebd477005738c94e2e65f8db076b\transformed\annotation-experimental-1.4.0\res
+com.example.notesapp.test.app-core-1.5.0-1 C:\Users\Shams Nisar\.gradle\caches\transforms-4\4094d790eaf32679eb61d5159fc1df21\transformed\core-1.5.0\res
+com.example.notesapp.test.app-androidTest-2 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\generated\res\resValues\androidTest\debug
+com.example.notesapp.test.app-mergeDebugAndroidTestResources-3 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.notesapp.test.app-mergeDebugAndroidTestResources-4 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.notesapp.test.app-debugAndroidTest-5 E:\Internship Training\Working\Working Apps\NoteCraft-SharedPref\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

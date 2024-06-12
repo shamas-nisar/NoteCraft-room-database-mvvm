@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.notesapp-mergeDebugResources-46:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\908b244589d73bdd96e74dc49ebaf2da\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        }
+    ]
+}
