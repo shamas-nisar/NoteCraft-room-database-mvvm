@@ -27,45 +27,49 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_margin="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:padding="15dp">
 
                 <TextView
                     android:id="@+id/txtTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:fontFamily="@font/google_sans_bold" />
 
                 <TextView
                     android:id="@+id/txtContents"
                     android:layout_width="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="20dp"
                     android:textSize="18sp"
                     android:fontFamily="@font/google_sans_medium" />
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:gravity="end">
+                    android:layout_gravity="end"
+                    android:gravity="center">
 
                     <Button
                         android:id="@+id/btnDelete"
                         style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/black"
                         android:elevation="2dp"
                         android:fontFamily="@font/google_sans_medium"
                         android:outlineAmbientShadowColor="@color/black"
                         android:shadowColor="@color/white"
                         android:text="@string/delete"
-                        android:textColor="#4F3789"
+                        android:textColor="@color/white"
                         android:textSize="19sp"
                         android:textStyle="bold" />
 
@@ -74,27 +78,28 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
+                        android:layout_marginStart="10dp"
                         android:fontFamily="@font/google_sans_medium"
                         android:text="@string/ok"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/black"
                         android:elevation="2dp"
                         android:shadowColor="@color/white"
-                        android:textColor="#4F3789"
+                        android:textColor="@color/white"
                         android:textSize="19sp"
                         android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btnShare"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="41dp"
+                        android:layout_height="42dp"
                         android:layout_gravity="center"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/share_button"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button_share"
                         tools:ignore="ButtonStyle"
-                        app:backgroundTint="@color/white"
+                        android:foregroundTint="@color/white"
+                        app:backgroundTint="@color/black"
                         android:elevation="2dp"
+                        android:layout_marginEnd="8dp"
                         android:shadowColor="@color/black"
                         android:shadowRadius="@integer/material_motion_duration_long_1" />
 
