@@ -20,10 +20,10 @@ interface NoteDao {
     @Query("SELECT * FROM notes_table ORDER BY noteID ASC")
     fun getNotes(): LiveData<List<Note>>
 
-    @Query("UPDATE notes_table SET isShared = 1 WHERE noteId = :id")
-    suspend fun shareNote(id: Int): Int
+    @Query("SELECT * FROM notes_table WHERE noteId =:id")
+    suspend fun shareNote(id: Int): Note?
 
     @Query("DELETE FROM notes_table WHERE noteId =:id")
-    suspend fun deleteNotes(id:Int)
+    suspend fun deleteNotes(id: Int)
 
 }

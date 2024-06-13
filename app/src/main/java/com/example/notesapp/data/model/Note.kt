@@ -7,9 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "notes_table")
 data class Note(
     @PrimaryKey(autoGenerate = true) val noteId: Int,
-    @ColumnInfo("noteTitle")
-    val title: String,
-    @ColumnInfo("noteContent")
-    val content: String,
-    val isShared: Boolean
+    @ColumnInfo("noteTitle") val title: String,
+    @ColumnInfo("noteContent") val content: String,
 )

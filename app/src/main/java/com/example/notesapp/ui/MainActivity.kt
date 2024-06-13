@@ -157,39 +157,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(shareThisNote)*/
     }
 
-    // This is commented because we are using room database and this is based on json file
-    /*private fun saveNotes() {
-        val notes = adapter.noteList
-        val gson = GsonBuilder().create()
-        val jsonNotes = gson.toJson(notes)
-
-        val outputStream = openFileOutput(FILEPATH, Context.MODE_PRIVATE)
-        OutputStreamWriter(outputStream).use { writer ->
-            writer.write(jsonNotes)
-        }
-    }*/
-
-    // Also commented because we are using room database and this is based on json file
-    /*private fun retrieveNotes(): MutableList<Note> {
-        val noteList = mutableListOf<Note>()
-        if (getFileStreamPath(FILEPATH).isFile) {
-            val fileInput = openFileInput(FILEPATH)
-            BufferedReader(InputStreamReader(fileInput)).use { reader ->
-                val stringBuilder = StringBuilder()
-                reader.forEachLine { line ->
-                    stringBuilder.append(line)
-                }
-
-                // instead of using reader block of code you can simply use this line of code below
-//                (line in reader.readLine()) stringBuilder.append(line)
-
-                if (stringBuilder.isNotEmpty()) {
-                    val listType = object : TypeToken<List<Note>>() {}.type
-                    noteList.addAll(Gson().fromJson(stringBuilder.toString(), listType))
-                }
-            }
-        }
-        return noteList
-    }*/
 
 }
