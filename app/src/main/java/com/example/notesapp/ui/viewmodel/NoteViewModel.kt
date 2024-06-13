@@ -37,10 +37,12 @@ class NoteViewModel(context: Context) : ViewModel() {
         }
     }
 
-    fun shareNote(id: Int) {
-        viewModelScope.launch(Dispatchers.IO) {
+    suspend fun shareNote(id: Int): Note? {
+
+        return repository.shareNoteFromDB(id)
+        /*viewModelScope.launch(Dispatchers.IO) {
             repository.shareNoteFromDB(id)
-        }
+        }*/
     }
 
     fun updateNotes(note: Note) {
