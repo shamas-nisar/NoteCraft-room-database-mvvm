@@ -8,11 +8,11 @@ class NoteRepository(private val noteDao: NoteDao) {
 
     fun getAllNotesFromDB() : LiveData<List<Note>> = noteDao.getNotes()
 
-    fun insertNoteInDB(note: Note) {
+    suspend fun insertNoteInDB(note: Note) {
         noteDao.insertNote(note)
     }
 
-    fun deleteNoteFromDB(id: Int) {
+    suspend fun deleteNoteFromDB(id: Int) {
         noteDao.deleteNotes(id)
     }
 

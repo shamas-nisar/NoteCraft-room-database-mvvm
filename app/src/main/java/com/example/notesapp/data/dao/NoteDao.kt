@@ -12,7 +12,7 @@ import com.example.notesapp.data.model.Note
 interface NoteDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertNote(note: Note)
+    suspend fun insertNote(note: Note)
 
     @Update
     suspend fun updateNotesList(note: Note)
@@ -24,6 +24,6 @@ interface NoteDao {
     suspend fun shareNote(id: Int): Int
 
     @Query("DELETE FROM notes_table WHERE noteId =:id")
-    fun deleteNotes(id:Int)
+    suspend fun deleteNotes(id:Int)
 
 }

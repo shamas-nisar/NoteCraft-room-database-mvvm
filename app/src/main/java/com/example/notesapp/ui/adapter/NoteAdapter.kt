@@ -1,57 +1,69 @@
 package com.example.notesapp.ui.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.R
 import com.example.notesapp.data.model.Note
-import com.example.notesapp.ui.MainActivity
+import kotlin.reflect.KFunction1
 
 class NoteAdapter(
-    private val mainActivity: MainActivity,
-    val requireContext: Context,
-    private var notesList: List<Note>
+    private val onNoteClicked: (Int) -> Unit,
+    private val onNoteActionRequired: (Note) -> Unit,
+    private val onDeleteNote: (Int) -> Unit
 ): RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     var noteList = mutableListOf<Note>()
 
-    @SuppressLint("NotifyDataSetChanged")
+    /*@SuppressLint("NotifyDataSetChanged")
     fun filtering(newFilteredList: ArrayList<Note>) {
         notesList = newFilteredList
         notifyDataSetChanged()
-    }
+    }*/
 
-    inner class NoteViewHolder(view: View) :
-        RecyclerView.ViewHolder(view) {
+    inner class NoteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         internal var title = view.findViewById<View>(R.id.viewTitle) as TextView
         internal var contents = view.findViewById<View>(R.id.viewContents) as TextView
 
         init {
-            view.isClickable = true
             view.setOnClickListener {
-                mainActivity.showNote(layoutPosition)
+                onNoteClicked.invoke(adapterPosition)
             }
+        }
+
+        fun bind(note: Note) {
+            title.text = note.title
+            contents.text = if (note.content.length < 350) note.content
+            else note.content.substring(0, 350) + "....."
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        return NoteViewHolder(
+
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false)
+        return  NoteViewHolder(view)
+
+        /*return NoteViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false)
-        )
+        )*/
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        val note = noteList[position]
-
-        holder.title.text = note.title
-        holder.contents.text = if (note.content.length < 370) note.content
-        else note.content.substring(0, 370) + "....."
+        holder.bind(noteList[position])
     }
 
     override fun getItemCount(): Int = noteList.size
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateNotes(newNotes: List<Note>) {
+        noteList.clear()
+        noteList.addAll(newNotes)
+        notifyDataSetChanged()
+    }
+
 }

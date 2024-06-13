@@ -112,15 +112,21 @@ public final class NoteDao_Impl implements NoteDao {
   }
 
   @Override
-  public void insertNote(final Note note) {
-    __db.assertNotSuspendingTransaction();
-    __db.beginTransaction();
-    try {
-      __insertionAdapterOfNote.insert(note);
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-    }
+  public Object insertNote(final Note note, final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __insertionAdapterOfNote.insert(note);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, $completion);
   }
 
   @Override
@@ -167,22 +173,28 @@ public final class NoteDao_Impl implements NoteDao {
   }
 
   @Override
-  public void deleteNotes(final int id) {
-    __db.assertNotSuspendingTransaction();
-    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteNotes.acquire();
-    int _argIndex = 1;
-    _stmt.bindLong(_argIndex, id);
-    try {
-      __db.beginTransaction();
-      try {
-        _stmt.executeUpdateDelete();
-        __db.setTransactionSuccessful();
-      } finally {
-        __db.endTransaction();
+  public Object deleteNotes(final int id, final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteNotes.acquire();
+        int _argIndex = 1;
+        _stmt.bindLong(_argIndex, id);
+        try {
+          __db.beginTransaction();
+          try {
+            _stmt.executeUpdateDelete();
+            __db.setTransactionSuccessful();
+            return Unit.INSTANCE;
+          } finally {
+            __db.endTransaction();
+          }
+        } finally {
+          __preparedStmtOfDeleteNotes.release(_stmt);
+        }
       }
-    } finally {
-      __preparedStmtOfDeleteNotes.release(_stmt);
-    }
+    }, $completion);
   }
 
   @Override

@@ -9,7 +9,7 @@ import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -29,12 +29,12 @@ import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var adapter: NoteAdapter
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferences: SharedPreferences
-    private val viewModel : NoteViewModel by viewModels()
-    var myNotes = arrayListOf<Note>()
+    private val viewModel : NoteViewModel by viewModels {
+        NoteViewModel.NoteViewModelFactory(applicationContext)
+    }
 
 
     companion object {
@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        adapter = NoteAdapter(::showNote, ::shareNote, ::deleteNote)
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.itemAnimator = DefaultItemAnimator()
+
 //        setSupportActionBar(binding.toolbar)
         binding.btnMenu.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
@@ -57,25 +61,30 @@ class MainActivity : AppCompatActivity() {
             NewNote().show(supportFragmentManager, null)
         }
 
-        binding.recyclerView.adapter = adapter
-        binding.recyclerView.itemAnimator = DefaultItemAnimator()
+//        binding.recyclerView.adapter = adapter
+//        binding.recyclerView.itemAnimator = DefaultItemAnimator()
 
         // Launching the retrieveNotes function whenever the app is launched
         // to display the saved notes
-        adapter.noteList = retrieveNotes()
+//        adapter.noteList = retrieveNotes()
+
         // notifyItemRangeInserted will tell the recyclerview that one or more items have been added to the RecyclerView
-        adapter.notifyItemRangeInserted(0, adapter.noteList.size)
+//        adapter.notifyItemRangeInserted(0, adapter.noteList.size)
 
         // Initialized the shared preferences variable that is defined at top as a lateinit variable
         // to save and access the shared preferences file
         // I may also comment this if needed later
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
+        viewModel.getNotesAll().observe(this, Observer { notes ->
+            adapter.noteList = notes.toMutableList()
+            adapter.notifyDataSetChanged()
+        })
+
     }
 
     override fun onStart() {
         super.onStart()
-
         val nightThemeSelected = sharedPreferences.getBoolean("theme", false)
         if (nightThemeSelected) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -115,35 +124,41 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun createNewNote(note: Note) {
-        adapter.noteList.add(note)
-        adapter.notifyItemInserted(adapter.noteList.size - 1)
-        saveNotes()
+        viewModel.addNotes(note)
     }
 
-    fun deleteNote(index: Int) {
-        adapter.noteList.removeAt(index)
-        adapter.notifyItemRemoved(index)
-        saveNotes()
+    private fun deleteNote(index: Int) {
+        viewModel.deleteNotes(adapter.noteList[index].noteId)
     }
 
-    fun showNote(index: Int) {
-        val dialog = ShowNote(adapter.noteList[index], index)
+    private fun showNote(index: Int) {
+        val dialog = ShowNote(adapter.noteList[index], adapter.noteList[index].noteId)
         dialog.show(supportFragmentManager, null)
     }
 
-    fun shareNote(note: Note) {
-        val intent = Intent()
-        intent.action = Intent.ACTION_SEND
+    private fun shareNote(note: Note) {
+        val intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "${note.title}\n" +
+                    "\n" +
+                    "${note.content}")
+            type = "text/plain"
+        }
+        startActivity(Intent.createChooser(intent, "Share Note via: "))
+
+
+        /*intent.action = Intent.ACTION_SEND
         intent.putExtra(
             Intent.EXTRA_TEXT,
             "${note.title}\n\n${note.content}"
         ) // Assuming 'content' is a property of the Note class
         intent.type = "text/plain" // Set the type to text/plain for sharing text
         val shareThisNote = Intent.createChooser(intent, "Share Note via: ")
-        startActivity(shareThisNote)
+        startActivity(shareThisNote)*/
     }
 
-    private fun saveNotes() {
+    // This is commented because we are using room database and this is based on json file
+    /*private fun saveNotes() {
         val notes = adapter.noteList
         val gson = GsonBuilder().create()
         val jsonNotes = gson.toJson(notes)
@@ -152,15 +167,21 @@ class MainActivity : AppCompatActivity() {
         OutputStreamWriter(outputStream).use { writer ->
             writer.write(jsonNotes)
         }
-    }
+    }*/
 
-    private fun retrieveNotes(): MutableList<Note> {
+    // Also commented because we are using room database and this is based on json file
+    /*private fun retrieveNotes(): MutableList<Note> {
         val noteList = mutableListOf<Note>()
         if (getFileStreamPath(FILEPATH).isFile) {
             val fileInput = openFileInput(FILEPATH)
             BufferedReader(InputStreamReader(fileInput)).use { reader ->
                 val stringBuilder = StringBuilder()
-                for (line in reader.readLine()) stringBuilder.append(line)
+                reader.forEachLine { line ->
+                    stringBuilder.append(line)
+                }
+
+                // instead of using reader block of code you can simply use this line of code below
+//                (line in reader.readLine()) stringBuilder.append(line)
 
                 if (stringBuilder.isNotEmpty()) {
                     val listType = object : TypeToken<List<Note>>() {}.type
@@ -169,6 +190,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return noteList
-    }
+    }*/
 
 }

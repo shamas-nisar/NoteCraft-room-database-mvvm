@@ -5,45 +5,44 @@ import android.app.Dialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
-import android.view.ViewGroup
+import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.example.notesapp.R
-import com.example.notesapp.databinding.NewNoteBinding
 import com.example.notesapp.data.model.Note
+import com.example.notesapp.databinding.NewNoteBinding
 import com.example.notesapp.ui.MainActivity
 import com.example.notesapp.ui.viewmodel.NoteViewModel
 import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class NewNote : DialogFragment() {
 
     private var viewBinding: NewNoteBinding? = null
     private val binding get() = viewBinding!!
-    private val viewModel : NoteViewModel by viewModels()
+    private lateinit var viewModel: NoteViewModel
 
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-
         val mainActivity = activity as MainActivity
+
+        val viewModelFactory = NoteViewModel.NoteViewModelFactory(mainActivity.applicationContext)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(NoteViewModel::class.java)
+
         val inflater = mainActivity.layoutInflater
         viewBinding = NewNoteBinding.inflate(inflater)
-
 
         val builder = AlertDialog.Builder(mainActivity)
             .setView(binding.root)
 
         binding.editContents.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-
                 v.append("\n")
                 true
-
             } else {
                 false
             }
@@ -98,18 +97,53 @@ class NewNote : DialogFragment() {
                     true
                 )
 
-                viewModel.addNotes(note)
-                // i will remove this when i finished other things or other logic,
-                // because the above line is used  to add the note to the database
-                mainActivity.createNewNote(note)
+                lifecycleScope.launch {
+                    try {
+                        viewModel.addNotes(note)
+                        Toast.makeText(
+                            mainActivity,
+                            resources.getString(R.string.note_saved),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        dismiss()
+                    } catch (e: Exception) {
+                        Log.e("NewNote", "Error adding note: ", e)
+                        Toast.makeText(
+                            mainActivity,
+                            "Error saving note",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
 
-                Toast.makeText(
-                    mainActivity,
-                    resources.getString(R.string.note_saved),
-                    Toast.LENGTH_SHORT
-                ).show()
+                /*lifecycleScope.launch {
+                    try {
+                        viewModel.addNotes(note)
+                    } catch (e: Exception) {
+                        Log.e("NewNote", "Error adding note: ", e)
+                        Toast.makeText(
+                            mainActivity,
+                            "Error Saving Note",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
 
-                dismiss()
+
+                    viewModel.addNotes(note)
+                    // i will remove this when i finished other things or other logic,
+                    // because the above line is used  to add the note to the database
+//                    mainActivity.createNewNote(note)
+
+                    Toast.makeText(
+                        mainActivity,
+                        resources.getString(R.string.note_saved),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    dismiss()
+
+
+                }*/
             } else Toast.makeText(
                 mainActivity,
                 resources.getString(R.string.note_empty),
