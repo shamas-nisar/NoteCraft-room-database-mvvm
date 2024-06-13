@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.notesapp-mergeDebugResources-46:/values-w1240dp-v13/values-w1240dp-v13.xml",
+            "outputFile": "com.example.notesapp-mergeDebugResources-52:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "E:\\Internship Training\\Working\\Working Apps\\NoteCraft-SharedPref\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "E:\\Internship Training\\Working\\Incomplete (In Progress)\\NoteCraft-RDB\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

@@ -1,10 +1,21 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.notesapp-mergeDebugResources-46:/values-v23/values-v23.xml",
+            "outputFile": "com.example.notesapp-mergeDebugResources-52:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "E:\\Internship Training\\Working\\Working Apps\\NoteCraft-SharedPref\\app\\src\\main\\res\\values-v23\\themes.xml",
+                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\472c536753d43f815e794c231f803a66\\transformed\\appcompat-1.6.1\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
+                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
+                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
+                    }
+                },
+                {
+                    "source": "E:\\Internship Training\\Working\\Incomplete (In Progress)\\NoteCraft-RDB\\app\\src\\main\\res\\values-v23\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,18 +34,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\908b244589d73bdd96e74dc49ebaf2da\\transformed\\appcompat-1.6.1\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
-                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
-                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
-                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\2a8a0bdd03ea7d584aa5ced59c0cf29e\\transformed\\material-1.12.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\6581867fcc142b89aff8a714dc41c27f\\transformed\\material-1.12.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -53,7 +53,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\1619a7626474a97fceda3e125a849af4\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\32cda1db7efba9f0a552fd45cce6b757\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

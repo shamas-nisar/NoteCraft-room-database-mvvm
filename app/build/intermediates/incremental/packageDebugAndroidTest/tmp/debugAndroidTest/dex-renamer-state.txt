@@ -1,7 +1,7 @@
-#Wed Jun 12 03:30:00 PDT 2024
-base.0=E\:\\Internship Training\\Working\\Working Apps\\NoteCraft-SharedPref\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
-base.1=E\:\\Internship Training\\Working\\Working Apps\\NoteCraft-SharedPref\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
-base.2=E\:\\Internship Training\\Working\\Working Apps\\NoteCraft-SharedPref\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\13\\classes.dex
+#Thu Jun 13 00:40:57 PDT 2024
+base.0=E\:\\Internship Training\\Working\\Incomplete (In Progress)\\NoteCraft-RDB\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=E\:\\Internship Training\\Working\\Incomplete (In Progress)\\NoteCraft-RDB\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=E\:\\Internship Training\\Working\\Incomplete (In Progress)\\NoteCraft-RDB\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\13\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex

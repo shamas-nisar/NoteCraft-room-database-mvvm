@@ -6,18 +6,21 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notesapp.R
-import com.example.notesapp.adapter.NoteAdapter
-import com.example.notesapp.data.NewNote
-import com.example.notesapp.data.ShowNote
+import com.example.notesapp.ui.adapter.NoteAdapter
+import com.example.notesapp.ui.fragmentDialog.NewNote
+import com.example.notesapp.ui.fragmentDialog.ShowNote
 import com.example.notesapp.databinding.ActivityMainBinding
 import com.example.notesapp.data.model.Note
+import com.example.notesapp.ui.viewmodel.NoteViewModel
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
@@ -30,6 +33,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: NoteAdapter
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferences: SharedPreferences
+    private val viewModel : NoteViewModel by viewModels()
+    var myNotes = arrayListOf<Note>()
+
 
     companion object {
         private const val FILEPATH = "notes.json"
@@ -51,7 +57,6 @@ class MainActivity : AppCompatActivity() {
             NewNote().show(supportFragmentManager, null)
         }
 
-        adapter = NoteAdapter(this)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.itemAnimator = DefaultItemAnimator()
 
@@ -63,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         // Initialized the shared preferences variable that is defined at top as a lateinit variable
         // to save and access the shared preferences file
+        // I may also comment this if needed later
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
     }

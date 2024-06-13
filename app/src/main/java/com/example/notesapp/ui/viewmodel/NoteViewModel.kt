@@ -25,6 +25,10 @@ class NoteViewModel(application: Application, private var repository: NoteReposi
         repository.updateNoteInDB(note)
     }
 
+    suspend fun shareNote(id: Int) {
+        repository.shareNoteFromDB(id)
+    }
+
     fun getNotesAll(): LiveData<List<Note>> = repository.getAllNotesFromDB()
 
 }
