@@ -1,8 +1,6 @@
 package com.example.notesapp.ui.viewmodel
 
-import android.app.Application
 import android.content.Context
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -22,7 +20,7 @@ class NoteViewModel(context: Context) : ViewModel() {
     }
 
     fun getNotesAll(): LiveData<List<Note>> {
-        return  repository.getAllNotesFromDB()
+        return repository.getAllNotesFromDB()
     }
 
     fun addNotes(note: Note) {
@@ -31,7 +29,7 @@ class NoteViewModel(context: Context) : ViewModel() {
         }
     }
 
-    fun deleteNotes(id : Int) {
+    fun deleteNotes(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteNoteFromDB(id)
         }
@@ -45,10 +43,6 @@ class NoteViewModel(context: Context) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateNoteInDB(note)
         }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
     }
 
     class NoteViewModelFactory(private val context: Context) : ViewModelProvider.Factory {

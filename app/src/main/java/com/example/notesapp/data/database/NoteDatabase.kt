@@ -17,7 +17,8 @@ abstract class NoteDatabase : RoomDatabase() {
     companion object {
         @Volatile
 
-        var INSTANCE:NoteDatabase?= null
+        var INSTANCE: NoteDatabase? = null
+
         @OptIn(InternalCoroutinesApi::class)
         fun getNoteDatabaseInstance(context: Context): NoteDatabase {
             val noteInstance = INSTANCE

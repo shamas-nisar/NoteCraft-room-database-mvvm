@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: NoteAdapter
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferences: SharedPreferences
-    private val viewModel : NoteViewModel by viewModels {
+    private val viewModel: NoteViewModel by viewModels {
         NoteViewModel.NoteViewModelFactory(applicationContext)
     }
 
