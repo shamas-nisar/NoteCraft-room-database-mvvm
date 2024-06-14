@@ -56,19 +56,6 @@ class MainActivity : AppCompatActivity() {
             NewNote().show(supportFragmentManager, null)
         }
 
-//        binding.recyclerView.adapter = adapter
-//        binding.recyclerView.itemAnimator = DefaultItemAnimator()
-
-        // Launching the retrieveNotes function whenever the app is launched
-        // to display the saved notes
-//        adapter.noteList = retrieveNotes()
-
-        // notifyItemRangeInserted will tell the recyclerview that one or more items have been added to the RecyclerView
-//        adapter.notifyItemRangeInserted(0, adapter.noteList.size)
-
-        // Initialized the shared preferences variable that is defined at top as a lateinit variable
-        // to save and access the shared preferences file
-        // I may also comment this if needed later
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 
         viewModel.getNotesAll().observe(this, Observer { notes ->
@@ -127,7 +114,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showNote(index: Int) {
-        val dialog = ShowNote(adapter.noteList[index], adapter.noteList[index].noteId)
+        val dialog = ShowNote(adapter.noteList[index], adapter.noteList[index].noteId, this)
         dialog.show(supportFragmentManager, null)
     }
 
@@ -138,16 +125,7 @@ class MainActivity : AppCompatActivity() {
             type = "text/plain"
         }
         startActivity(Intent.createChooser(intent, "Share Note via: "))
-
-        /*intent.action = Intent.ACTION_SEND
-        intent.putExtra(
-            Intent.EXTRA_TEXT,
-            "${note.title}\n\n${note.content}"
-        ) // Assuming 'content' is a property of the Note class
-        intent.type = "text/plain" // Set the type to text/plain for sharing text
-        val shareThisNote = Intent.createChooser(intent, "Share Note via: ")
-        startActivity(shareThisNote)*/
     }
 
-
 }
+

@@ -40,7 +40,6 @@ class NoteViewModel(context: Context) : ViewModel() {
     suspend fun shareNote(id: Int) {
         repository.shareNoteFromDB(id)
     }
-
     fun updateNotes(note: Note) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.updateNoteInDB(note)

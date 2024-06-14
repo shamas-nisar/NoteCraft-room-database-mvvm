@@ -2,11 +2,13 @@ package com.example.notesapp.ui.fragmentDialog
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.room.util.newStringBuilder
 import com.example.notesapp.R
 import com.example.notesapp.data.model.Note
 import com.example.notesapp.databinding.ShowNoteBinding
@@ -14,7 +16,7 @@ import com.example.notesapp.ui.MainActivity
 import com.example.notesapp.ui.viewmodel.NoteViewModel
 import kotlinx.coroutines.launch
 
-class ShowNote(private val note: Note, private val noteId: Int) : DialogFragment() {
+class ShowNote(private val note: Note, private val noteId: Int, private val mainActivity: MainActivity) : DialogFragment() {
 
     private var viewBinding: ShowNoteBinding? = null
     private val binding get() = viewBinding!!
@@ -93,8 +95,8 @@ class ShowNote(private val note: Note, private val noteId: Int) : DialogFragment
                 // as the above line of code is for room database
 //                mainActivity.shareNote(note) // This line calls the shareNote function in MainActivity
 
-                /*Toast.makeText(mainActivity, "Note is being shared..", Toast.LENGTH_SHORT).show()
-                dismiss()*/
+                Toast.makeText(mainActivity, "Note is being shared..", Toast.LENGTH_SHORT).show()
+                dismiss()
             }
         }
 

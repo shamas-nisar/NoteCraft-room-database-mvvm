@@ -19,6 +19,7 @@ import com.example.notesapp.ui.MainActivity
 import com.example.notesapp.ui.viewmodel.NoteViewModel
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.launch
+import kotlin.math.truncate
 
 class NewNote : DialogFragment() {
 

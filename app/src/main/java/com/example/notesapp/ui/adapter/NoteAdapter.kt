@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
@@ -14,16 +15,11 @@ import kotlin.reflect.KFunction1
 class NoteAdapter(
     private val onNoteClicked: (Int) -> Unit,
     private val onNoteActionRequired: (Note) -> Unit,
-    private val onDeleteNote: (Int) -> Unit
+    private val onDeleteNote: (Int) -> Unit,
+//    private val onNoteShareClicked: (Note) -> Unit
 ): RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     var noteList = mutableListOf<Note>()
-
-    /*@SuppressLint("NotifyDataSetChanged")
-    fun filtering(newFilteredList: ArrayList<Note>) {
-        notesList = newFilteredList
-        notifyDataSetChanged()
-    }*/
 
     inner class NoteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -34,7 +30,10 @@ class NoteAdapter(
             view.setOnClickListener {
                 onNoteClicked.invoke(adapterPosition)
             }
+
         }
+
+
 
         fun bind(note: Note) {
             title.text = note.title
