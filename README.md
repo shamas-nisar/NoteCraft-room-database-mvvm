@@ -17,11 +17,11 @@ Here're some of the project's best features:
 <div style="text-align: center;">
   <table style="margin: 0 auto;">
     <tr align="center">
-      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/home_screen.png?raw=true" alt="project-screenshot" width="200" height="370"/></td>
-      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/add_new_note_screen.png?raw=true" alt="project-screenshot" width="200" height="370"/></td>
-      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/notes_preview_screen.png?raw=true" alt="project-screenshot" width="200" height="370"/></td>
-      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/note_view_screen.png?raw=true" alt="project-screenshot" width="200" height="370"/></td>
-      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/preference_screen.png?raw=true" alt="project-screenshot" width="200" height="370"/></td>
+      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/home_screen.png?raw=true" alt="project-screenshot" width="200" height="300"/></td>
+      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/add_new_note_screen.png?raw=true" alt="project-screenshot" width="200" height="300"/></td>
+      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/notes_preview_screen.png?raw=true" alt="project-screenshot" width="200" height="300"/></td>
+      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/note_view_screen.png?raw=true" alt="project-screenshot" width="200" height="300"/></td>
+      <td><img src="https://github.com/shamas-nisar/NotesApp-using-shared_preferences-kotlin/blob/master/preference_screen.png?raw=true" alt="project-screenshot" width="200" height="300"/></td>
     </tr>
   </table>
 </div>
