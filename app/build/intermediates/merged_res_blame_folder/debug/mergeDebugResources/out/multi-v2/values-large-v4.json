@@ -4,7 +4,7 @@
             "outputFile": "com.example.notesapp-mergeDebugResources-52:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\6581867fcc142b89aff8a714dc41c27f\\transformed\\material-1.12.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\f877c15a3bdddb58b4eba7c3ff3c4f4f\\transformed\\material-1.12.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\472c536753d43f815e794c231f803a66\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Shams Nisar\\.gradle\\caches\\transforms-4\\2e95365a5ac8cac20f5b878836def403\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
