@@ -16,8 +16,8 @@ class NoteRepository(private val noteDao: NoteDao) {
         noteDao.deleteNotes(id)
     }
 
-    suspend fun shareNoteFromDB(id: Int): Note? {
-        return noteDao.shareNote(id)
+    suspend fun shareNoteFromDB(id: Int) {
+        noteDao.shareNote(id)
     }
 
     suspend fun updateNoteInDB(note: Note) {

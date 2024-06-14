@@ -1,7 +1,6 @@
 package com.example.notesapp.data.dao;
 
 import android.database.Cursor;
-import android.os.CancellationSignal;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
@@ -17,6 +16,7 @@ import androidx.sqlite.db.SupportSQLiteStatement;
 import com.example.notesapp.data.model.Note;
 import java.lang.Class;
 import java.lang.Exception;
+import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -36,6 +36,8 @@ public final class NoteDao_Impl implements NoteDao {
 
   private final EntityDeletionOrUpdateAdapter<Note> __updateAdapterOfNote;
 
+  private final SharedSQLiteStatement __preparedStmtOfShareNote;
+
   private final SharedSQLiteStatement __preparedStmtOfDeleteNotes;
 
   public NoteDao_Impl(@NonNull final RoomDatabase __db) {
@@ -44,7 +46,7 @@ public final class NoteDao_Impl implements NoteDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR IGNORE INTO `notes_table` (`noteId`,`noteTitle`,`noteContent`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR IGNORE INTO `notes_table` (`noteId`,`noteTitle`,`noteContent`,`isShared`) VALUES (nullif(?, 0),?,?,?)";
       }
 
       @Override
@@ -61,13 +63,15 @@ public final class NoteDao_Impl implements NoteDao {
         } else {
           statement.bindString(3, entity.getContent());
         }
+        final int _tmp = entity.isShared() ? 1 : 0;
+        statement.bindLong(4, _tmp);
       }
     };
     this.__updateAdapterOfNote = new EntityDeletionOrUpdateAdapter<Note>(__db) {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `notes_table` SET `noteId` = ?,`noteTitle` = ?,`noteContent` = ? WHERE `noteId` = ?";
+        return "UPDATE OR ABORT `notes_table` SET `noteId` = ?,`noteTitle` = ?,`noteContent` = ?,`isShared` = ? WHERE `noteId` = ?";
       }
 
       @Override
@@ -84,7 +88,17 @@ public final class NoteDao_Impl implements NoteDao {
         } else {
           statement.bindString(3, entity.getContent());
         }
-        statement.bindLong(4, entity.getNoteId());
+        final int _tmp = entity.isShared() ? 1 : 0;
+        statement.bindLong(4, _tmp);
+        statement.bindLong(5, entity.getNoteId());
+      }
+    };
+    this.__preparedStmtOfShareNote = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "UPDATE notes_table SET isShared = 1 WHERE noteId = ?";
+        return _query;
       }
     };
     this.__preparedStmtOfDeleteNotes = new SharedSQLiteStatement(__db) {
@@ -134,6 +148,31 @@ public final class NoteDao_Impl implements NoteDao {
   }
 
   @Override
+  public Object shareNote(final int id, final Continuation<? super Integer> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Integer>() {
+      @Override
+      @NonNull
+      public Integer call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfShareNote.acquire();
+        int _argIndex = 1;
+        _stmt.bindLong(_argIndex, id);
+        try {
+          __db.beginTransaction();
+          try {
+            final Integer _result = _stmt.executeUpdateDelete();
+            __db.setTransactionSuccessful();
+            return _result;
+          } finally {
+            __db.endTransaction();
+          }
+        } finally {
+          __preparedStmtOfShareNote.release(_stmt);
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
   public Object deleteNotes(final int id, final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
@@ -171,6 +210,7 @@ public final class NoteDao_Impl implements NoteDao {
           final int _cursorIndexOfNoteId = CursorUtil.getColumnIndexOrThrow(_cursor, "noteId");
           final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "noteTitle");
           final int _cursorIndexOfContent = CursorUtil.getColumnIndexOrThrow(_cursor, "noteContent");
+          final int _cursorIndexOfIsShared = CursorUtil.getColumnIndexOrThrow(_cursor, "isShared");
           final List<Note> _result = new ArrayList<Note>(_cursor.getCount());
           while (_cursor.moveToNext()) {
             final Note _item;
@@ -188,7 +228,11 @@ public final class NoteDao_Impl implements NoteDao {
             } else {
               _tmpContent = _cursor.getString(_cursorIndexOfContent);
             }
-            _item = new Note(_tmpNoteId,_tmpTitle,_tmpContent);
+            final boolean _tmpIsShared;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfIsShared);
+            _tmpIsShared = _tmp != 0;
+            _item = new Note(_tmpNoteId,_tmpTitle,_tmpContent,_tmpIsShared);
             _result.add(_item);
           }
           return _result;
@@ -202,34 +246,6 @@ public final class NoteDao_Impl implements NoteDao {
         _statement.release();
       }
     });
-  }
-
-  @Override
-  public Object shareNote(final int id, final Continuation<? super Unit> $completion) {
-    final String _sql = "SELECT * FROM notes_table WHERE noteId =?";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
-    int _argIndex = 1;
-    _statement.bindLong(_argIndex, id);
-    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
-    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<Unit>() {
-      @Override
-      @NonNull
-      public Unit call() throws Exception {
-        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-        try {
-          final Unit _result;
-          if (_cursor.moveToFirst()) {
-            _result = new Unit();
-          } else {
-            _result = null;
-          }
-          return _result;
-        } finally {
-          _cursor.close();
-          _statement.release();
-        }
-      }
-    }, $completion);
   }
 
   @NonNull

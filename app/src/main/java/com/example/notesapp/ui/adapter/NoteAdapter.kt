@@ -41,6 +41,7 @@ class NoteAdapter(
             contents.text = if (note.content.length < 350) note.content
             else note.content.substring(0, 350) + "....."
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
@@ -48,9 +49,6 @@ class NoteAdapter(
         val view = LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false)
         return  NoteViewHolder(view)
 
-        /*return NoteViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.note_preview, parent, false)
-        )*/
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {

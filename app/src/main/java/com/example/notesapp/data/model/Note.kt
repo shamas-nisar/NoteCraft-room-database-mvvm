@@ -9,4 +9,5 @@ data class Note(
     @PrimaryKey(autoGenerate = true) val noteId: Int,
     @ColumnInfo("noteTitle") val title: String,
     @ColumnInfo("noteContent") val content: String,
+    val isShared: Boolean
 )

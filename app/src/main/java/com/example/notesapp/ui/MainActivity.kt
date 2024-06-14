@@ -1,6 +1,6 @@
 package com.example.notesapp.ui
 
-import android.content.Context
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -15,18 +15,12 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notesapp.R
+import com.example.notesapp.data.model.Note
+import com.example.notesapp.databinding.ActivityMainBinding
 import com.example.notesapp.ui.adapter.NoteAdapter
 import com.example.notesapp.ui.fragmentDialog.NewNote
 import com.example.notesapp.ui.fragmentDialog.ShowNote
-import com.example.notesapp.databinding.ActivityMainBinding
-import com.example.notesapp.data.model.Note
 import com.example.notesapp.ui.viewmodel.NoteViewModel
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.OutputStreamWriter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var adapter: NoteAdapter
@@ -37,10 +31,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    companion object {
+   /* companion object {
         private const val FILEPATH = "notes.json"
-    }
+    }*/
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -139,13 +134,10 @@ class MainActivity : AppCompatActivity() {
     private fun shareNote(note: Note) {
         val intent = Intent().apply {
             action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, "${note.title}\n" +
-                    "\n" +
-                    "${note.content}")
+            putExtra(Intent.EXTRA_TEXT, "${note.title}\n\n${note.content}")
             type = "text/plain"
         }
         startActivity(Intent.createChooser(intent, "Share Note via: "))
-
 
         /*intent.action = Intent.ACTION_SEND
         intent.putExtra(

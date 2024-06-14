@@ -1,162 +1,158 @@
 [
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.notesapp-debug-54:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.notesapp-debug-54:/drawable_app_logo.png.flat",
+        "source": "com.example.notesapp-main-56:/drawable/app_logo.png"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.notesapp-debug-54:/layout_activity_main.xml.flat",
+        "source": "com.example.notesapp-main-56:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.notesapp-debug-54:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_note_app_icon_top.png.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\note_app_icon_top.png"
+        "merged": "com.example.notesapp-debug-54:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_preview_card_background_shape.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\preview_card_background_shape.xml"
+        "merged": "com.example.notesapp-debug-54:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.notesapp-main-56:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.notesapp-debug-54:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.notesapp-debug-54:/xml_backup_rules.xml.flat",
+        "source": "com.example.notesapp-main-56:/xml/backup_rules.xml"
     },
     {
         "merged": "com.example.notesapp-debug-54:/layout_show_note.xml.flat",
         "source": "com.example.notesapp-main-56:/layout/show_note.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.notesapp-debug-54:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.notesapp-debug-54:/layout_note_preview.xml.flat",
+        "source": "com.example.notesapp-main-56:/layout/note_preview.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\layout_new_note.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\layout\\new_note.xml"
+        "merged": "com.example.notesapp-debug-54:/layout_new_note.xml.flat",
+        "source": "com.example.notesapp-main-56:/layout/new_note.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\font_vegan_style_font.ttf.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\font\\vegan_style_font.ttf"
+        "merged": "com.example.notesapp-debug-54:/drawable_preview_card_background_shape.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/preview_card_background_shape.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\xml_root_preferences.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\xml\\root_preferences.xml"
+        "merged": "com.example.notesapp-debug-54:/drawable_note_app_icon_top.png.flat",
+        "source": "com.example.notesapp-main-56:/drawable/note_app_icon_top.png"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_fab_icon_image.png.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\fab_icon_image.png"
+        "merged": "com.example.notesapp-debug-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\font_google_sans_medium.ttf.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\font\\google_sans_medium.ttf"
+        "merged": "com.example.notesapp-debug-54:/menu_menu_main.xml.flat",
+        "source": "com.example.notesapp-main-56:/menu/menu_main.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_blur_background.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\blur_background.xml"
+        "merged": "com.example.notesapp-debug-54:/layout_template.xml.flat",
+        "source": "com.example.notesapp-main-56:/layout/template.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_vertical_menu.png.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\vertical_menu.png"
+        "merged": "com.example.notesapp-debug-54:/drawable_button_share.png.flat",
+        "source": "com.example.notesapp-main-56:/drawable/button_share.png"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\layout_note_preview.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\layout\\note_preview.xml"
+        "merged": "com.example.notesapp-debug-54:/drawable_vertical_menu.png.flat",
+        "source": "com.example.notesapp-main-56:/drawable/vertical_menu.png"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\layout_show_note.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\layout\\show_note.xml"
+        "merged": "com.example.notesapp-debug-54:/xml_root_preferences.xml.flat",
+        "source": "com.example.notesapp-main-56:/xml/root_preferences.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.notesapp-debug-54:/drawable_show_note_background.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/show_note_background.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.notesapp-debug-54:/drawable_home_topbar_shape.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/home_topbar_shape.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_button_share.png.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\button_share.png"
+        "merged": "com.example.notesapp-debug-54:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\font_google_sans_regular.ttf.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\font\\google_sans_regular.ttf"
+        "merged": "com.example.notesapp-debug-54:/drawable_share_button.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/share_button.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\layout_settings_activity.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\layout\\settings_activity.xml"
+        "merged": "com.example.notesapp-debug-54:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\layout\\activity_main.xml"
+        "merged": "com.example.notesapp-debug-54:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\font_google_sans_bold.ttf.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\font\\google_sans_bold.ttf"
+        "merged": "com.example.notesapp-debug-54:/drawable_blur_background.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/blur_background.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_home_topbar_shape.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\home_topbar_shape.xml"
+        "merged": "com.example.notesapp-debug-54:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.notesapp-debug-54:/drawable_ic_add_note.xml.flat",
+        "source": "com.example.notesapp-main-56:/drawable/ic_add_note.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\menu_menu_main.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\menu\\menu_main.xml"
+        "merged": "com.example.notesapp-debug-54:/font_google_sans_bold.ttf.flat",
+        "source": "com.example.notesapp-main-56:/font/google_sans_bold.ttf"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\layout_template.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\layout\\template.xml"
+        "merged": "com.example.notesapp-debug-54:/font_vegan_style_font.ttf.flat",
+        "source": "com.example.notesapp-main-56:/font/vegan_style_font.ttf"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\xml\\backup_rules.xml"
+        "merged": "com.example.notesapp-debug-54:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.notesapp-debug-54:/font_google_sans_medium.ttf.flat",
+        "source": "com.example.notesapp-main-56:/font/google_sans_medium.ttf"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.notesapp-debug-54:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.notesapp-debug-54:/font_google_sans_regular.ttf.flat",
+        "source": "com.example.notesapp-main-56:/font/google_sans_regular.ttf"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_ic_add_note.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\ic_add_note.xml"
+        "merged": "com.example.notesapp-debug-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.notesapp-debug-54:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.notesapp-main-56:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_share_button.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\share_button.xml"
+        "merged": "com.example.notesapp-debug-54:/drawable_fab_icon_image.png.flat",
+        "source": "com.example.notesapp-main-56:/drawable/fab_icon_image.png"
     },
     {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_app_logo.png.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\app_logo.png"
-    },
-    {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-debug-54:\\drawable_show_note_background.xml.flat",
-        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.6\\com.example.notesapp-main-56:\\drawable\\show_note_background.xml"
+        "merged": "com.example.notesapp-debug-54:/layout_settings_activity.xml.flat",
+        "source": "com.example.notesapp-main-56:/layout/settings_activity.xml"
     }
 ]

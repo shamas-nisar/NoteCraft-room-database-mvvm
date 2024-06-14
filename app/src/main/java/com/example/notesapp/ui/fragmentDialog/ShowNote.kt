@@ -69,10 +69,14 @@ class ShowNote(private val note: Note, private val noteId: Int) : DialogFragment
         binding.btnShare.setOnClickListener {
             lifecycleScope.launch {
                 try {
-                    viewModel.shareNote(noteId)
-                    Toast.makeText(mainActivity, "Note is being shared..", Toast.LENGTH_SHORT)
-                        .show()
+                    viewModel.shareNote(note.noteId)
+                    Toast.makeText(
+                        mainActivity,
+                        "Note is being shared..",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     dismiss()
+
                 } catch (e: Exception) {
                     Toast.makeText(
                         mainActivity,

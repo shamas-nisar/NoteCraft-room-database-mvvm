@@ -37,12 +37,8 @@ class NoteViewModel(context: Context) : ViewModel() {
         }
     }
 
-    suspend fun shareNote(id: Int): Note? {
-
-        return repository.shareNoteFromDB(id)
-        /*viewModelScope.launch(Dispatchers.IO) {
-            repository.shareNoteFromDB(id)
-        }*/
+    suspend fun shareNote(id: Int) {
+        repository.shareNoteFromDB(id)
     }
 
     fun updateNotes(note: Note) {
@@ -65,27 +61,3 @@ class NoteViewModel(context: Context) : ViewModel() {
     }
 
 }
-
-
-
-/*
-class NoteViewModel(application: Application, private val repository: NoteRepository) : AndroidViewModel(application) {
-
-    suspend fun addNotes(note: Note) {
-        repository.insertNoteInDB(note)
-    }
-    suspend fun deleteNotes(id : Int) {
-        repository.deleteNoteFromDB(id)
-    }
-
-    suspend fun updateNotes(note: Note) {
-        repository.updateNoteInDB(note)
-    }
-
-    suspend fun shareNote(id: Int) {
-        repository.shareNoteFromDB(id)
-    }
-
-    fun getNotesAll(): LiveData<List<Note>> = repository.getAllNotesFromDB()
-
-}*/
