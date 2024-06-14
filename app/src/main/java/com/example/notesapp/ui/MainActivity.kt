@@ -30,11 +30,6 @@ class MainActivity : AppCompatActivity() {
         NoteViewModel.NoteViewModelFactory(applicationContext)
     }
 
-
-   /* companion object {
-        private const val FILEPATH = "notes.json"
-    }*/
-
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,6 +121,5 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(Intent.createChooser(intent, "Share Note via: "))
     }
-
 }
 
