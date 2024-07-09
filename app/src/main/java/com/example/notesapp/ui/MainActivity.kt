@@ -12,7 +12,6 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notesapp.model.Note
 import com.example.notesapp.adapter.NoteAdapter
 import com.example.notesapp.R
@@ -56,13 +55,9 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.itemAnimator = DefaultItemAnimator()
 
-        val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        binding.recyclerView.layoutManager = layoutManager
-
         // Launching the retrieveNotes function whenever the app is launched
         // to display the saved notes
         adapter.noteList = retrieveNotes()
-
         // notifyItemRangeInserted will tell the recyclerview that one or more items have been added to the RecyclerView
         adapter.notifyItemRangeInserted(0, adapter.noteList.size)
 

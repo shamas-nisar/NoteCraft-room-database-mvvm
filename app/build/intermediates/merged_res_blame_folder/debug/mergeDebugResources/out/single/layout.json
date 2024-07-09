@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-mergeDebugResources-53:\\layout\\settings_activity.xml",
+        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-main-56:\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-mergeDebugResources-53:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-main-56:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-mergeDebugResources-53:\\layout\\note_preview.xml",
+        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-main-56:\\layout\\note_preview.xml"
+    },
+    {
+        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-mergeDebugResources-53:\\layout\\new_note.xml",
+        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-main-56:\\layout\\new_note.xml"
+    },
+    {
+        "merged": "com.example.notesapp-mergeDebugResources-53:/layout/new_note.xml",
+        "source": "com.example.notesapp-main-56:/layout/new_note.xml"
+    },
+    {
+        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-mergeDebugResources-53:\\layout\\show_note.xml",
+        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-main-56:\\layout\\show_note.xml"
+    },
+    {
+        "merged": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-mergeDebugResources-53:\\layout\\template.xml",
+        "source": "C:\\Users\\Shams Nisar\\.gradle\\daemon\\8.7\\com.example.notesapp-main-56:\\layout\\template.xml"
+    }
+]
